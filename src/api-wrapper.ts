@@ -19,7 +19,7 @@ export async function waitForTask(client: Client, parameters: InputParameters): 
     parameters.timeout * 1000,
     (task: ServerTask) => {
       if (parameters.hideProgress !== true) {
-        client.info(`waiting for task ${task.Id}. Status: ${task.State}.`)
+        client.info(`waiting for task ${task.Id}. Status: ${task.State}. Timeout = ${parameters.timeout}.`)
         client.info(`timeout = ${parameters.timeout}`)
       }
     }
